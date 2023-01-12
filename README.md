@@ -1,2 +1,2 @@
-# Silence blank project
-This is an empty Silence project.
+# Silence project
+This is a Silence project.
