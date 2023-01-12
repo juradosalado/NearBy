@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Publicación en detalle</title>
+
+        <link rel="stylesheet" href="css/style.css" />
+
+        <link rel="icon" href="images/iconNearBy.png" />
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/customBootstrap.css"/>
+
+        <script src="/js/utils/include.js"></script>
+
+        <script src="js/libs/jquery-3.4.1.min.js"></script>
+        <script src="js/libs/bootstrap.min.js"></script>
+        <script src="js/libs/popper.min.js"></script>
+
+        <script src="js/photo_details.js" type="module"></script>
+        <script src="js/header.js" type ="module"></script>
+
+        <script src="js/libs/axios.min.js"></script>
+
+    </head>
+
+    <body>
+        <div><!--Deja espacio para la cabecera-->
+            <hr>
+            <hr>
+            <hr>
+        </div>
+
+        <div class="container">
+            <div id=errors></div>
+            <div class="row text-left" id=id-fila-foto>
+                <div id=id-div-referencia></div>
+                <div class="col-md" id=id-columna-foto>
+                    <p></p>
+                    <div class="row text-right" id="id-div-botones-logged">
+                            
+                        <button class="btn" id=id-boton-editar>Editar publicacion</button>
+                        
+                        <!--Div que sirve para separar ambos botones-->
+                        <div class=col-md-1>
+                        </div>
+                        
+                        <button class="btn" id=id-boton-eliminar>Eliminar publicacion</button>
+                    
+                    </div> <!--Fin del div que se esconde si la foto no es del usuario que la visualiza-->
+                    <hr>
+                    <div class="row">
+                        <h3 id="id-rate-value">Valoración media de la publicación:</h3>
+                    </div>
+                    <div id="id-div-esconder">
+                        <form id ="id-formulario-puntuar">
+                            <div class= " form-group ">
+                                <label for= "rating-input"></label>
+                                <h3>Puntúa la publicación:</h3>
+                                <select id="rating-input" name= "rate" class= "form-control">
+                                    <option value= "1">* </option>
+                                    <option value= "2">** </option>
+                                    <option value= "3">*** </option>
+                                    <option value= "4"> **** </option>
+                                    <option value= "5"> ***** </option>
+                                </select>
+                            </div >
+                            <button type= "submit" class= "btn btn-success" id="id-boton-puntuacion"> Puntuar </button >
+                        </form>
+                        <hr>
+                        
+                    </div><!--fin del div que se esconde si no estás logueado-->
+                    <div id="id-div-categorias">
+                        <h3>Categorías:</h3>
+                    </div>
+                    <hr>
+                    <button class="btn" class= "btn btn-success"  id="id-boton-comentarios">Ver comentarios</button>
+                    
+                </div><!--Fin de la columna-foto-->
+            </div><!--Fin fila-foto que se elimina si el usuario no está registrado-->
+
+    
+         <p id=id-espacio></p>
+
+
+        </div> <!--Fin del container-->
+        <div id="id-page-header"></div><!-- Barra de navegación Nav-->
+
+
+        <script>
+            include("headerNav.html", "#id-page-header");
+        </script>
+        
+
+
+    </body>

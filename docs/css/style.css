@@ -1,0 +1,311 @@
+*{
+    font-family: Arial;
+}
+div.class-photo-block{
+    text-align:center;
+    border: 1px solid gray;
+    border-radius: 5%;
+}
+
+h2.class-photo-title{
+    font-size: 140%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+}
+
+h3.class-photo-score{
+    font-size: 130%;
+    font-family: monospace;
+}
+
+img.class-photo-image{
+    max-height: 200px;
+    width: auto;
+}
+
+.gallery-container{
+    display:grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+img.phto-image{
+    width: 100%;
+    height: auto;
+}
+
+.input-group > label{
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+}
+
+.input-group{
+    margin-bottom: 0.5em;
+}
+
+/* Estilo de los títulos de las páginas (Publicaciones Recientes...)*/
+
+#id-title{
+    font-size: 300%;
+    text-decoration: none;
+    color: #000000;
+    font-family: Arial;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+/*Estilo de la página inicial*/
+
+#id-cuerpo-carta-foto{
+    background-color: rgb(245, 245, 245);
+}
+
+/*Colores de los links*/
+
+#id-link:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  #id-link:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  #id-link:hover {
+    color: gray;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  #id-link:active{
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+/*Links de la cabecera*/
+.navbar-toggler-icon{
+  background-color: #000;
+}
+  .navbar-brand{
+    
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+
+  }
+  #id-navbar-title:hover{
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+  }
+   
+  .nav-link:hover{
+    color: rgb(78, 78, 78);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  /*Links sobre azul*/
+  #id-link-sobre-azul:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  #id-link-sobre-azul:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  #id-link-sobre-azul:hover {
+    color:black;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  #id-link-sobre-azul:active{
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  /*Estilo de la imagen al detalle*/
+  .rating {
+    display: inline-block;
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    font-size: 50px;
+  }
+  
+  .rating label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  .rating label:last-child {
+    position: static;
+  }
+  
+  .rating label:nth-child(1) {
+    z-index: 5;
+  }
+  
+  .rating label:nth-child(2) {
+    z-index: 4;
+  }
+  
+  .rating label:nth-child(3) {
+    z-index: 3;
+  }
+  
+  .rating label:nth-child(4) {
+    z-index: 2;
+  }
+  
+  .rating label:nth-child(5) {
+    z-index: 1;
+  }
+  
+  .rating label input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  
+  .rating label .icon {
+    float: left;
+    color: transparent;
+  }
+  
+  .rating label:last-child .icon {
+    color: #000;
+  }
+  
+  .rating:not(:hover) label input:checked ~ .icon,
+  .rating:hover label:hover input ~ .icon {
+    color: #09f;
+  }
+  
+  .rating label input:focus:not(:checked) ~ .icon:last-child {
+    color: #000;
+    text-shadow: 0 0 5px #09f;
+  }
+  #id-imagen-detalle{
+      border-radius: 5%;
+  }
+  #id-titulo-imagen-detalle{
+      font-weight: bold;
+  }
+
+  #id-boton-verde{
+      border-radius: 5%;
+      background-color: rgba(120, 160, 104, 100);
+      color: white;
+  }
+
+  #id-boton-negro{
+    border-radius: 5%;
+    background-color: rgb(58, 58, 58);
+    color: white;
+}
+
+#id-boton-puntuacion{
+  border-radius: 5%;
+  background-color: rgb(58, 58, 58);
+  color: white;
+}
+
+  #id-boton-verde-grande{
+    border-radius: 5%;
+    background-color: rgba(120, 160, 104, 100);
+    color: white;
+    font-size: larger;
+}
+
+#id-boton-comentarios{
+  border-radius: 5%;
+  background-color: rgba(120, 160, 104, 100);
+  color: white;
+  font-size: larger;
+}
+
+  #id-boton-editar{
+    border-radius: 5%;
+    background-color: rgba(79, 146, 173, 100);
+    color: white;
+  }
+
+  #id-boton-eliminar{
+      
+    border-radius: 5%;
+    background-color: rgba(174, 71, 71, 100);
+    color: white;
+  }
+
+  #id-boton-logout{
+      
+    border-radius: 5%;
+    background-color: rgba(174, 71, 71, 100);
+    color: white;
+  }
+
+  #id-texto-alternativo{
+      font-size: small;
+  }
+
+  /*Estilo perfil*/
+  /*#id-contenedor-redondeador{
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 100%;
+  }*/
+  #id-imagen-perfil{
+    width:150px;
+    height:150px;
+    border-radius:160px;
+  }
+
+  /*Estilo comentarios*/
+  #id-texto-fecha{
+      color: gray;
+      font-size: medium;
+  }
+
+  #id-titulo-comentario{
+      font-size: larger;
+      font-weight: bold;
+  }
+
+  #id-carta-comentario{
+      border-color: black;
+  }
+
+  #id-cabecera-carta-comentario{
+    background-color: rgba(79, 146, 173, 100);
+  }
+
+  #id-cuerpo-carta-comentario{
+      background-color: rgb(238, 238, 238);
+  }
+
+  /*Estilos register*/
+  #errors{
+    position: fixed;
+    top: 20px;
+    z-index: 1;
+  }
+  /*#id-contenedor-formulario{
+    position: static;
+  }*/

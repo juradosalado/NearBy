@@ -1,0 +1,110 @@
+<!doctype HTML>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title id="id-page-title">Añadir Publicación</title>
+        <link rel="icon" href="images/iconNearBy.png" />
+        <link rel="stylesheet" href="css/style.css">
+        <script src="/js/utils/include.js"></script>
+
+        <meta name="viewport" content="width=device-width , initial-scale=1 ,shrink-to-fit=no">
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/font-awesome.min.css">
+        
+        <script src="/js/libs/jquery-3.4.1.min.js"></script>
+        <script src="/js/libs/bootstrap.min.js"></script>
+        <script src="/js/libs/popper.min.js"></script>
+        
+
+        <script src="/js/edit_photo.js" type="module"></script>
+        <script src="/js/libs/axios.min.js"></script>
+        <script src="/js/header.js" type ="module"></script>
+        
+
+        <title>Añadir publicación</title>
+    </head>
+
+    <body style="background-color: rgb(233, 233, 233)">
+        <div><!--Deja espacio para la cabecera-->
+            <hr>
+            <hr>
+            <hr>
+        </div>
+
+        <div id=errors></div>
+
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md text-center">
+                    <p></p>
+                    <div class="card border-secondary">
+                        <div class="card-body">
+                            <h2 class="card-title" id="id-card-title">Añadir publicación</h2>
+
+                            <form id="id-form-photo-upload">
+                                <div class="form-group text-left">
+                                    <label for="input-url">URL:</label>
+                                    <input required type="text" class="form-control" id="input-url" name="url"
+                                        placeholder="URL de la fotografía">
+                                </div>
+        
+                                <div class="form-group text-left">
+                                    <label for="input-title">Título:</label>
+                                    <input required type="text" class="form-control" id="input-title" name="title"
+                                        placeholder="Título">
+                                </div>
+        
+                                <div class="form-group text-left">
+                                    <label for="input-description">Descripción:</label>
+                                    <textarea class="form-control" id="input-description" name="description"
+                                        placeholder="Descripción de la imagen..." rows="4"></textarea>
+                                </div>
+
+                                <div class="form-group text-left">
+                                    <label for="input-alt">Texto alternativo:</label>
+                                    <!--Finalmente descarté esta idea para no incitar a dejar el alt en blanco
+                                        <p id=id-texto-alternativo>Se usará para describir la imagen de forma textual. De ser dejado en blanco, se usará la
+                                        descripción de la publicacion como texto alternativo.
+                                    </p>-->
+                                    <textarea required class="form-control" id="input-alt" name="alt"
+                                        placeholder="Texto alternativo..." rows="4"></textarea>
+                                </div>
+
+                                <div class="form-group text-left">
+                                    <label for="input-categories">Categorías:</label>
+                                        <p id=id-texto-alternativo>Introduzca las categorías que desea asociar a la Publicación separadas por ",".
+                                    </p>
+                                    <textarea class="form-control" id="input-categories" name="name"
+                                        placeholder="Categorías..." rows="4"></textarea>
+                                </div>
+        
+                                <div class="form-group text-left">
+                                    <label for="input-visibility">Visibilidad:</label>
+                                    <select required class="form-control" id="input-visibility" name="visibility">
+                                        <option value="Public">Pública</option>
+                                        <option value="Private">Privada</option>
+                                    </select>
+                                </div>
+        
+                                <div class="row">
+                                    <div class="col-md text-center">
+                                        <button type="submit" class="btn btn-secondary">Enviar</button>
+                                    </div>
+                                </div>
+                            </form>
+
+
+                            
+                        </div> <!--Fin del cuerpo de la carta-->
+                    </div><!--Fin de la carta-->
+                </div><!--Fin de la columna-->
+            </div><!--Fin de la fila-->
+        </div><!--Fin del contenedor-->
+
+        <div id="id-page-header"></div>
+
+        <script>
+            include("headerNav.html", "#id-page-header");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Shared Header</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/customBootstrap.css"/>
+
+        <script src="/js/utils/include.js"></script>
+
+        <script src="js/libs/bootstrap.min.js"></script>
+        <script src="js/libs/jquery-3.4.1.min.js"></script>
+        <script src="js/libs/popper.min.js"></script>
+
+        <script src="js/index.js" type="module"></script>
+        <style>
+            /* Modify the background color */
+              
+            .navbar-custom {
+                
+                background-color:rgba(120, 160, 104, 100);
+                color:black;
+                position: fixed;
+                top: 0px;
+                width: 100%;
+            }
+
+            .navbar-light{
+                background-color:rgba(120, 160, 104, 100);
+                color:black;
+                position: fixed;
+                top: 0px;
+                width: 100%;
+            }
+
+            .nav-item{
+                color: black;
+            }
+            .nav-link{
+                color: black;
+            }
+            #id-navbarContents li a{
+                color: black;
+            }
+        </style>
+
+    </head>
+
+    <body>
+  <!--<nav class="navbar navbar-expand-lg navbar-custom" id="id-nabar">-->
+        <nav class= "navbar navbar-expand-lg navbar-light" id="id-navbar">
+            <!-- First element: the brand
+            <a class="navbar-brand" id="id-navbar-title" href="#">Navigation index</a>
+            -->
+
+
+            <!-- Second element: toggle button (hidden)-->
+            <button class= "navbar-toggler" type= "button" data-toggle= "collapse"
+                data-target= "#id-navbarContents" aria-controls= "id-navbarContents" aria-expanded= "false"
+                 aria-label= "Toggle navigation" id="id-navbar-toggle">
+                <span class= "navbar-toggler-icon"> </span >
+            </button >
+
+            <!-- Third element: the contents of the navegation bar-->
+            <!-- Recent photos, register, login, trending-->
+            <div class="collapse navbar-collapse"
+                id="id-navbarContents">
+                <ul class="navbar-nav">
+                    <!--Tu Feed-->
+                    <li class="nav-item">
+                        <a class="nav-link"  href="index.html" id="id-navbar-recientes">
+                            <i class="fa fa-camera-retro" aria-hidden="true"></i> Publicaciones Recientes
+                        </a>
+                    </li>
+
+                    <!-- Trending-->
+                    <!--<li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href= "#" id="id-navbar-trending"
+                                data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <i class="fa fa-signal" aria-hidden="true"></i>
+                            Trending
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby= "navbarDropdownMenuLink">
+                            <a class="dropdown-item" href= "trending_users.html" id=id-rotulos-navbar> Trending users</a>
+                            <a class="dropdown-item" href= "trending_photos.html" id=id-rotulos-navbar>Trending photos</a>
+                                </div>
+                    </li>-->
+
+                    <!--Iniciar sesión (Solo para usuarios no registrados)-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="log-in.html" id="id-navbar-login">
+                            <i class="fa fa-sign-in" aria-hidden="true"></i>
+                            Iniciar Sesión
+                        </a>
+                    </li>
+
+                    <!--Registrarse (Solo para usuarios no registrados)-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html" id="id-navbar-register">
+                            <i class="fa fa-user-plus" aria-hidden="true"></i>
+                            Regístrate
+                        </a>
+                    </li>
+
+                    <!--Añadir publicacion (Solo para usuarios registrados)-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="edit-photo.html" id="id-navbar-añadir-publicacion">
+                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            Añadir publicación</a>
+                    </li>
+
+                    <!-- Tu perfil-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html" id=id-navbar-tu-perfil>
+                            </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="id-navbar-logout">
+                            <i class="fa fa-sign-out" aria-hidden="true"></i>
+                            Cerrar sesión</a>
+                    </li>
+                </ul><!--End of the ul that contains the menu items-->
+            </div> <!-- End of the container for the ul which, itself, contains the menu items-->
+        </nav>
+
+    </body>

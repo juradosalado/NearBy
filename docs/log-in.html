@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Inicar Sesión</title>
+        <link rel="icon" href="images/iconNearBy.png" />
+        <link rel="stylesheet" href="css/style.css" />
+
+        
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/customBootstrap.css"/>
+
+        <script src="/js/utils/include.js"></script>
+
+        <script src="js/libs/jquery-3.4.1.min.js"></script>
+        <script src="js/libs/bootstrap.min.js"></script>
+        <script src="js/libs/popper.min.js"></script>
+
+        <script src="js/logIn.js" type="module"></script>
+        <script src="/js/libs/axios.min.js"></script>
+    </head>
+
+    <body style="background-color: rgb(233, 233, 233)">
+        <div class= container>
+            <div id=errors></div> <!--Div usado para mostrar errores-->
+            <div class="row text-center">
+                <div class="col-md text-center">
+                    <p></p>
+                    <div class="card border-secondary">
+                        <div class="card-body">
+                            <h2 class="card-title">Inicia sesión</h2>
+                            <h5 class="card-text">Por favor, introduzca sus datos para iniciar sesión en su perfil de Near By</h5>
+                            <form id="id-login-form">
+                                <div class="form-group text-left">
+                                    <label for="id-email-input">Nombre de usuario:</label>
+                                    <input type="text" class="form-control" id="id-usuario-input"
+                                        name="username" placeholder="Usuario" required>
+                                </div>
+
+                                <div class="form-group text-left">
+                                    <label for="id-contraseña-input">Contraseña:</label>
+                                    <input type="password" class="form-control" id="id-contraseña-input"
+                                        name="password" placeholder="Contraseña">
+                                </div>
+
+                                <div class= "col-md text-center">
+                                    <button type= "submit" class= "btn btn-secondary">Inicar Sesión</button>
+                                </div>
+                                <p></p>
+
+                                <h6 class="card-text">¿Aún no te has registrado?</h6>
+                                <button onclick="window.location.href='register.html'" class="btn btn-secondary">Regístrate</button>
+
+
+                            </form><!--Fin del formulario-->
+                        </div><!--Fin del cuerpo de la carta-->
+                    </div><!--Fin de la carta-->
+                </div><!--Fin de la primera columna-->
+            </div><!--Fin de la primera fila-->
+        </div><!--Fin del contenedor-->
+
+    </body>
+
+</html>

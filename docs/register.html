@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title id="id-page-title">Regístrate</title>
+        <link rel="icon" href="images/iconNearBy.png" />
+        <link rel="stylesheet" href="css/style.css" />
+
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/customBootstrap.css"/>
+
+        <script src="/js/utils/include.js"></script>
+
+        <script src="js/libs/jquery-3.4.1.min.js"></script>
+        <script src="js/libs/bootstrap.min.js"></script>
+        <script src="js/libs/popper.min.js"></script>
+
+        <script src="js/register.js" type="module"></script>
+        <script src="/js/libs/axios.min.js"></script>
+
+
+    </head>
+
+
+    <body style="background-color: rgb(233, 233, 233)">
+
+        <div class= container id=id-contenedor-formulario>
+            <div id=errors></div> <!--Div usado para mostrar errores-->
+            <div class="row text-center">
+                <div class="col-md text-center">
+                    <p></p>
+                    <div class="card border-secondary">
+                        <div class="card-body">
+                            <h2 class="card-title" id="id-card-title">Regístrate</h2>
+                            <h5 class="card-text" id="id-card-text">Por favor, introduzca sus datos para crear su perfil en Near By</h5>
+                            <form id=id-register-form>
+                                <div class="form-group text-left">
+                                    <label for="id-nombre-input">Nombre:</label>
+                                    <input required type="text" class="form-control" id="id-nombre-input"
+                                        name="firstName" placeholder="Nombre" required>
+                                </div>
+                                <div class="form-group text-left">
+                                    <label for="id-apellidos-input">Apellidos:</label>
+                                    <input required type="text" class="form-control" id="id-apellidos-input"
+                                        name="lastName" placeholder="Apellidos" required>
+                                </div>
+
+                                <div class="form-group text-left">
+                                    <label for="id-prefijo-input">Teléfono:</label>
+                                    <select name="prefijo" id= "id-prefijo-input">
+                                        <option value="34">España (+34)</option>
+                                        <option value="1">USA (+1)</option>
+                                        <option value="other">Otro</option>
+                                    </select>
+                                    <input required type="text" id="id-telefono-input" class="form-control"
+                                    name="telephone" placeholder="Teléfono" required>
+                                </div>
+
+                                <div class="form-group text-left">
+                                    <label for="id-email-input">Email:</label>
+                                    <input required type="email" class="form-control" id="id-email-input"
+                                        name="email" placeholder="Email" required>
+                                </div>
+
+
+                                <div class="form-group text-left">
+                                    <label for="id-usuario-input">Nombre de usuario:</label>
+                                    <input required type="text" class="form-control" id="id-usuario-input"
+                                        name="username" placeholder="Usuario" required>
+                                </div>
+
+
+                                <div class="form-group text-left">
+                                    <label for="id-url-input">URL de la foto de Perfil:</label>
+                                    <input required type="text" class="form-control" id="id-url-input" name="avatarUrl"
+                                        placeholder="URL de la fotografía">
+                                </div>
+
+                                <div class="form-group text-left">
+                                    <label for="id-contraseña-input">Contraseña:</label>
+                                    <input required type="password" class="form-control" id="id-contraseña-input"
+                                        name="password" placeholder="Contraseña">
+                                </div>
+
+                                <div class="form-group text-left">
+                                    <label for="id-password2-input">Repita su contraseña:</label>
+                                    <input required type="password" class="form-control" id="id-password2-input"
+                                        name="passwordPrime" placeholder="Contraseña repetida">
+                                </div>
+
+                                <div class= "col-md text-center">
+                                    <button type= "submit" class= "btn btn-secondary" id="id-boton-submit">Registrarse</button>
+                                </div>
+                            </form><!--Fin del formulario-->
+                        </div><!--Fin del cuerpo de la carta-->
+                    </div><!--Fin de la carta-->
+                </div><!--Fin de la primera columna-->
+            </div><!--Fin de la primera fila-->
+        </div><!--Fin del contenedor-->
+        
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Añadir publicacion</title>
+
+        <link rel="stylesheet" href="css/style.css" />
+
+        <link rel="icon" href="images/iconNearBy.png" />
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/customBootstrap.css"/>
+
+        <script src="/js/utils/include.js"></script>
+
+        <script src="js/libs/bootstrap.min.js"></script>
+        <script src="js/libs/jquery-3.4.1.min.js"></script>
+        <script src="js/libs/popper.min.js"></script>
+
+        <script src="js/index.js" type="module"></script>
+
+    </head>
+
+    <body>
+        <div id="id-page-header"></div><!-- Barra de navegación Nav-->
+        <p></p>
+        <div class="container">
+            <form>
+                <div class="row">
+                    <div class="col-md">
+                        <button class="btn" type="file">
+                                Añadir imagen
+                        </button>
+                    </div> <!--Fin de la columna de añadir fotografía-->
+
+                    <div class="col-md">
+                        <div class="form-group text-left">
+                            <label for="id-titulo-input">Título:</label>
+                            <input type="text" class="form-control" id="id-titlo-input"
+                                name="Título" placeholder="Título" required>
+                        </div>
+                    </div> <!--Fin del div de descripción y puntuación-->
+
+                </div><!--Fin de la primera fila-->
+            </form>
+
+            
+            <p></p>
+
+            <div class="row text-left">
+                <div class="col-md-3">
+                    <a href="user_profile.html" id=id-link>
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        @User1</a>
+                    <p> 12/01/2021</p>
+                    
+                </div>
+                
+                <div class="col-md-3 text-center">
+                    <button class="btn" id=id-boton-editar>Editar publicacion</button>
+                    <p></p>
+                    <button class="btn" id=id-boton-eliminar>Eliminar publicacion</button>
+                
+                </div> <!--Fin del div de opciones-->
+            </div>
+
+        </div> <!--Fin del container-->
+
+        <script>
+            include("headerNav.html", "#id-page-header");
+        </script>
+        
+
+
+    </body>

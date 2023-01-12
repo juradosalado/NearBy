@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <title>Comentarios de la publicación</title>
+        <link rel="icon" href="images/iconNearBy.png" />
+        <link rel="stylesheet" href="css/style.css" />
+
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+        <script src="/js/utils/include.js"></script>
+
+        <script src="js/libs/jquery-3.4.1.min.js"></script>
+        <script src="js/libs/bootstrap.min.js"></script>
+        <script src="js/libs/popper.min.js"></script>
+        <script src="js/libs/axios.min.js"></script>
+
+        <script src="js/comments.js" type="module"></script>
+        <script src="js/header.js" type ="module"></script>
+
+        <link rel="stylesheet" href="css/customBootstrap.css"/>
+
+
+    </head>
+
+    <body>
+        <div><!--Deja espacio para la cabecera-->
+            <hr>
+            <hr>
+            <hr>
+        </div>
+        <div class="container">
+          <div id=errors></div><!--Div usado para mostrar errores de carga-->
+
+              <div class="row text-center" id="id-añade-comentario">
+                <div class="col-md" id="id-col-create-comment">
+                    <form id="id-create-comment-form">
+                        <div class="form-group text-left">
+                            <label for="input-description" id=id-titulo-comentario>Deja tu comentario:</label>
+                            <textarea class="form-control" id="input-comentario" name="text"
+                                placeholder="Comentario..." rows="4"></textarea>
+                        </div><!--Fin del input-->
+
+                        <div class="row">
+                            <div class="col-md text-left">
+                                <button type="submit" class="btn btn-secondary">Enviar</button>
+                            </div>
+                        </div><!--Boton enviar-->
+                    </form>
+                </div>
+              </div><!--Fin fila del input que se oculta si no has iniciado sesión-->
+              <p></p>
+
+              <div id="id-cartas-comentarios">
+
+              </div><!--Fin del div que contiene comentarios-->
+
+          </div><!--Fin contenedor-->
+
+          <div id="id-page-header"></div><!-- Barra de navegación Nav-->
+
+          <script>
+              include("headerNav.html", "#id-page-header");
+          </script>
+    </body>
+
+
+
+
+</html>

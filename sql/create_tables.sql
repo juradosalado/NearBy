@@ -1,0 +1,82 @@
+DROP TABLE IF EXISTS Photos;
+DROP TABLE IF EXISTS Users;
+DROP TABLE IF EXISTS Ratings;
+DROP TABLE if EXISTS Words;
+DROP TABLE if EXISTS Comments;
+DROP TABLE if EXISTS Categories;
+DROP TABLE if EXISTS PhotoCategories;
+
+
+
+CREATE TABLE Users (
+	userId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	firstName VARCHAR(128) NOT NULL,
+	lastName VARCHAR(128) NOT NULL,
+	telephone VARCHAR(32) NOT NULL,
+	email VARCHAR(128) unique NOT NULL,
+	username VARCHAR(64) UNIQUE NOT NULL,
+	password VARCHAR(256) NOT NULL,
+	avatarUrl VARCHAR(512)
+);
+
+CREATE TABLE Photos (
+	photoId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	title VARCHAR(128) NOT NULL,
+	description VARCHAR(512),
+	alt VARCHAR(512),
+	date DATETIME DEFAULT CURRENT_TIMESTAMP,
+	url VARCHAR(512) NOT NULL,
+	visibility VARCHAR(16) NOT NULL,
+	userId INT NOT NULL,
+	FOREIGN KEY (userId) REFERENCES Users (userId) ON DELETE cascade,
+	CONSTRAINT ValidVisibility CHECK (visibility in ('Public', 'Private'))
+);
+
+
+CREATE TABLE Ratings (
+	date DATETIME DEFAULT CURRENT_TIMESTAMP,
+	rate INT NOT NULL,
+	userId INT NOT NULL,
+	photoId INT NOT NULL,
+	FOREIGN KEY (userId) REFERENCES Users (userId) ON DELETE cascade,
+	FOREIGN KEY (photoId) REFERENCES Photos (photoId) ON DELETE cascade,
+	UNIQUE (userId, photoId)
+);
+
+
+
+CREATE TABLE Words (
+	word VARCHAR(128) NOT NULL,
+	wordId INT NOT NULL PRIMARY KEY AUTO_INCREMENT
+);
+
+
+CREATE TABLE Comments(
+	commentId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	date DATETIME DEFAULT CURRENT_TIMESTAMP,
+	text VARCHAR(512) NOT NULL,
+	userId INT NOT NULL,
+	photoId INT NOT NULL,
+	FOREIGN KEY (userId) REFERENCES Users (userId) ON DELETE cascade,
+	FOREIGN KEY (photoId) REFERENCES Photos (photoId) ON DELETE cascade
+);
+
+
+CREATE TABLE categories(
+	NAME VARCHAR(128) PRIMARY KEY NOT NULL UNIQUE);
+
+
+CREATE TABLE PhotoCategories(
+	photoCategoriesId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	photoId INT NOT NULL,
+	name VARCHAR(128) NOT NULL,
+	FOREIGN KEY (photoId) REFERENCES Photos (photoId) ON DELETE cascade,
+	FOREIGN KEY (name) REFERENCES Categories (NAME),
+	UNIQUE(NAME, photoId)
+);
+	
+	
+	
+	
+
+-- Create the rest of your tables...

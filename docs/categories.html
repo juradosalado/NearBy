@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <title>Near By</title>
+        <link rel="icon" href="images/iconNearBy.png" />
+        <link rel="stylesheet" href="css/style.css" />
+
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+        <script src="/js/utils/include.js"></script>
+
+        <script src="js/libs/jquery-3.4.1.min.js"></script>
+        <script src="js/libs/bootstrap.min.js"></script>
+        <script src="js/libs/popper.min.js"></script>
+        <script src="js/libs/axios.min.js"></script>
+
+        <script src="js/categories.js" type="module"></script>
+        <script src="js/header.js" type ="module"></script>
+
+        <link rel="stylesheet" href="css/customBootstrap.css"/>
+
+
+
+
+    </head>
+
+    <body>
+        <div><!--Deja espacio para la cabecera-->
+            <hr>
+            <hr>
+            <hr>
+        </div>
+        <div class="container" id="id-contenedor-fotos">
+            <div id=errors></div><!--Div usado para mostrar errores de carga-->
+
+            <!--<div class="row text-center">
+                <div class="col-md" id="id-titulos">
+                    <p></p>
+                    <h2 id="id-title" class="text-left">Publicaciones Recientes</h2>
+                    <p></p>
+                </div>
+            </div>-->
+        </div>
+
+              
+        <div id="id-page-header"></div><!-- Barra de navegación Nav-->
+        
+
+        <script>
+            include("headerNav.html", "#id-page-header");
+        </script>
+    </body>
+
+
+
+
+</html>
